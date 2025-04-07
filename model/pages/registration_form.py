@@ -7,7 +7,7 @@ from model.resourse import path
 class RegistrationPage:
 
     def open(self):
-        browser.open('https://demoqa.com/automation-practice-form')
+        browser.open('/automation-practice-form')
 
     def remove_banner(self):
         browser.driver.execute_script("$('#fixedban').remove()")

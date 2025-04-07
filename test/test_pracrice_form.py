@@ -3,7 +3,7 @@ import allure
 from model.pages.registration_form import RegistrationPage
 
 
-def test_complete_and_submit_form():
+def test_complete_and_submit_form(setup_browser):
     with allure.step("Открываем браузер и переходим на форму для заполнения"):
         registration_page = RegistrationPage()
         registration_page.open()

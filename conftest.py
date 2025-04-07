@@ -8,13 +8,13 @@ from dotenv import load_dotenv
 
 from utils import attach
 
-DEFAULT_BROWSER_VERSION = "127.0"
+DEFAULT_BROWSER_VERSION = "128.0"
 
 
 def pytest_addoption(parser):
     parser.addoption(
         '--browser_version',
-        default='127.0'
+        default='128.0'
     )
 
 
@@ -45,7 +45,7 @@ def setup_browser(request):
         command_executor=f"https://{login}:{password}@selenoid.autotests.cloud/wd/hub",
         options=options
     )
-    browser = Browser(Config(driver))
+    browser = Browser(Config(driver=driver))
 
     yield browser
 

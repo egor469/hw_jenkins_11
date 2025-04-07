@@ -13,6 +13,7 @@ def pytest_addoption(parser):
         '--browser_version',
         default='128.0'
     )
+
 @pytest.fixture(scope="session", autouse=True)
 def load_env():
     load_dotenv()
